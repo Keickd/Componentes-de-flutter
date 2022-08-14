@@ -1,3 +1,4 @@
+import 'package:fl_components/Themes/app_theme.dart';
 import 'package:fl_components/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
@@ -10,12 +11,11 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Componentes de Flutter'),
         centerTitle: true,
-        elevation: 0,
       ),
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
                 leading: Icon(AppRoutes.menuOptions[index].icon,
-                    color: Colors.indigo),
+                    color: AppTheme.primary),
                 title: Text(AppRoutes.menuOptions[index].name),
                 onTap: () {
                   // final route = MaterialPageRoute(
