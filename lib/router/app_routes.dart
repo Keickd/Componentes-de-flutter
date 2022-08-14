@@ -30,7 +30,7 @@ class AppRoutes {
     MenuOption(
         route: 'card',
         name: 'Cards',
-        screen: const CardScreen(),
+        screen: CardScreen(),
         icon: Icons.credit_card)
   ];
 
