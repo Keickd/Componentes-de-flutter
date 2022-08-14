@@ -65,15 +65,13 @@ class InputsScreen extends StatelessWidget {
                           value: 'Jr. Developer', child: Text('Jr. Developer'))
                     ],
                     onChanged: (value) {
-                      print(value);
                       formValues['role'] = value ?? 'Admin';
                     }),
                 ElevatedButton(
                   onPressed: () {
                     FocusScope.of(context).requestFocus(FocusNode());
-                    print(formValues);
+
                     if (!myFormKey.currentState!.validate()) {
-                      print('Formulario invalido');
                       return;
                     }
                   },
