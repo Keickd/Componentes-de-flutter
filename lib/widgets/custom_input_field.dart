@@ -6,6 +6,8 @@ class CustomInputField extends StatelessWidget {
   final String? helperText;
   final IconData? icon;
   final IconData? suffixIcon;
+  final TextInputType? keyboardInputType;
+  final bool obscureText;
 
   const CustomInputField({
     Key? key,
@@ -14,6 +16,8 @@ class CustomInputField extends StatelessWidget {
     this.helperText,
     this.icon,
     this.suffixIcon,
+    this.keyboardInputType,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -22,6 +26,8 @@ class CustomInputField extends StatelessWidget {
       autofocus: true,
       initialValue: 'Marcos Salas',
       textCapitalization: TextCapitalization.words,
+      keyboardType: keyboardInputType,
+      obscureText: obscureText,
       onChanged: (value) {},
       validator: (value) {
         if (value == null) return 'Este campo es requerido';
